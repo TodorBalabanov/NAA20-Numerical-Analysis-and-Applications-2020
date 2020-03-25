@@ -1,0 +1,74 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{Aggregated Financial Forecasting Calculation in Human-Computer Distributed Computing\thanks{This research is funded by Velbazhd Software LLC and it is partially supported by the Bulgarian Ministry of Education and Science (contract D01–205/23.11.2018) under the National Scientific Program ``Information and Communication Technologies for a Single Digital Market in Science, Education and Security (ICTinSES)'', approved by DCM \# 577/17.08.2018.}}
+%
+\titlerunning{Aggregated FF Calculation in HCDC}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Petar Tomov \and Iliyan Zankinski \and Todor Balabanov\orcidID{0000-0003-3139-069X}}
+%
+\authorrunning{P. Tomov et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Institute of Information and Communication Technologies \\ Bulgarian Academy of Sciences \\ acad. Georgi Bonchev Str., block 2, 1113 Sofia, Bulgaria \\ \email{p.tomov@iit.bas.bg} \email{iliyan@hsi.iccs.bas.bg} \email{todorb@iinf.bas.bg}
+\url{http://iict.bas.bg/}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Three of the most famous financial forecasting donated distributed computing projects for the last decade were MoneyBee, GStock and MQL5 Cloud Network. The idea of a desktop computer screen-saver used for artificial neural networks training was extended in VitoshaTrade project where Android Active Wallpaper is used for the same purpose. The project implementation goes on in IICT-BAS and the forecasting capabilities are evolved in the direction of human-computer based distributed computing. This research proposes financial forecasting calculation based on users' classification and votes given for the particular financial future events. 
+
+\keywords{Financial forecasting \and Distributed computing \and Voting platform.}
+\end{abstract}
+%
+%
+%
+\section{Introduction}
+%
+Three of the most famous financial forecasting donated distributed computing projects for the last decade were MoneyBee\cite{money-bee-01}, GStock\cite{g-stock-01} and MQL5 Cloud Network\cite{mql5-cloud-network-01}. MoneyBee project was organized as donated distributed computing screen-saver. Artificial neural networks were trained to forecast financial time series during desktop computers idle usage. GStock project used donated distributed computing for trading strategies testing. Many different investment strategies were checked over historical data and the best suited were applied for buy/sell signals generation. MQL5 Cloud Network is paid distributed computing platform in which trading strategies can be tested. 
+
+The idea of a desktop computer screen-saver used for artificial neural networks training was extended in VitoshaTrade\cite{vitosha-trade-01} project where Android Active Wallpaper is used for the same purpose. The project implementation goes on in IICT-BAS and the forecasting capabilities are evolved in the direction of human-computer based distributed computing (crowdsensing\cite{crowdsensing-01}). The users are asked to vote for the future change in the price of Forex currency pairs. Android operating system provides the ideal user interface capabilities for such voting by its widget components. By HTTP protocol the vote of the users is collected on a remote PHP-MySQL based server. As proposed in NSFDE\&A'20, users' votes are classified in four categories: 1) High voting frequency and high guess rate users; 2) Low voting frequency and high guess rate users; 3) High voting frequency and low guess rate users; 4) Low voting frequency and low guess rate users.
+
+This research proposes financial forecasting calculation based on users classification and votes given for particular financial future event. 
+%
+\section{Conclusions}
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\begin{thebibliography}{8}
+
+\bibitem{money-bee-01} Bohn, A., Guting, T., Mansmann, T.: MoneyBee Aktienkursprognose mit kunstlicher intelligenz bei hoher rechenleistung. Wirtschaftsinf \textbf{45}, 325--333 (2003)
+
+\bibitem{g-stock-01} Chokesatean, P.: Credibility-based Binary Feedback Model for Grid Resource Planning. University of Pittsburgh (2008)
+
+\bibitem{mql5-cloud-network-01} Chang, C., Narayana Srirama S., Buyya, R.: Indie Fog An Efficient Fog-Computing Infrastructure for the Internet of Things. Computer \textbf{50}(9), 92--98 (2017)
+
+\bibitem{vitosha-trade-01} Zankinski, I., Barova, M., Tomov P.: Hybrid Approach Based on Combination of Backpropagation and Evolutionary Algorithms for Artificial Neural Networks Training by Using Mobile Devices in Distributed Computing Environment. Proceedings of Large-Scale Scientific Computing, 425--432 (2018)
+
+\bibitem{crowdsensing-01} Leppanen, T., Alvarez Lacasia, J., Tobe, Y., Sezaki, K., Riekki, J.: Mobile crowdsensing with mobile agents. Autonomous Agents and Multi-Agent Systems \textbf{31}, 1--35 (2017)
+
+\end{thebibliography}
+
+\end{document}
