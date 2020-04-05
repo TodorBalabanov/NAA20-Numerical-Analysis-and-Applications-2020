@@ -53,7 +53,23 @@ Time series are values measured in strict time order \cite{time-series-01}. In m
 
 Technical analysis of financial time series uses a group of methods for temporal data analyzing in such a way that meaningful statistics and other characteristics to be extracted. Financial time series forecasting is based on a model that predicts future values according to previously observed values. Financial time series usually have trend, seasonality and high-frequency oscillations \cite{time-series-04}. The base of the technical analysis in financial time series is an appropriate curve fitting to the points which are already known.
 %
-\section{Distributed Computing in Forecasting}
+\section{Distributed Computing in Financial Forecasting}
+%
+When a particular computation is a too much time consuming it is rational such calculation to be done on many computational machines in parallel \cite{distributed-computing-01}. When artificial neural networks are used for financial time series forecasting, the training can be organized with genetic algorithms \cite{genetic-algorithms-01} or differential evolution \cite{differential-evolution-01}. Both global optimization techniques are perfect for parallel computing and of course for distributed computing because global population can be separated in many local populations and the process of optimization can go simultaneously.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig01.png}
+\caption{Time series splitting to training examples.}
+\label{fig01}
+\end{figure}
+
+In the technical analysis time series are conditionally divided (Fig. \ref{fig01} and Fig.\ref{fig02}) into past (lag) and future (lead) periods \cite{time-series-04}.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig02.png}
+\caption{Financial time series.}
+\label{fig02}
+\end{figure}
 %
 \section{Android OS Crowdsensing Solution}
 %
@@ -90,6 +106,14 @@ Technical analysis of financial time series uses a group of methods for temporal
 \bibitem{time-series-03} Lan, Y.: Computational Approaches for Time Series Analysis and Prediction Data-Driven Methods for Pseudo-Periodical Sequences. University of Bradford (2009)
 
 \bibitem{time-series-04} Kolev, K., Sevova, J., Ketipov, R., Blagoev, I., Petrov, P., Kostadinov, G., Zankinski, I.: Removal of Linear Component and Sinusoidal Harmonics from Time Series with Differential Evolution. Proceedings of Annual University Scientific Conference of Vasil Levski National Military University, 1586--1594 (2019)
+
+\bibitem{distributed-computing-01} Megiddo, N.: Applying parallel computation algorithms in the design of serial algorithms. Journal of the Association for Computing Machinery \textbf{30}(4), 852--865 (1983)
+
+\bibitem{genetic-algorithms-01} Donate, J.P., Li, X., Sanchez, G.G., Miguel, A.S.: Time series forecasting by evolving artificial neural networks with genetic algorithms, differential evolution and estimation of distribution algorithm. Neural Computing and Applications \textbf{22}, 11--20 (2013)
+
+\bibitem{differential-evolution-01} Balabanov, T. Zankinski, I., Dobrinkova, N.: Time Series Prediction by Artificial Neural Networks and Differential Evolution in Distributed Environment. Proceedings of Large-Scale Scientific Computing Conference \textbf{7116}, 198--205 (2012)
+
+\bibitem{time-series-04}  Tomov, P., Zankinski, I., Balabanov, T.: Training of Artificial Neural Networks for Financial Time Series Forecasting in Android Service and Widgets. Problems of Engineering Cybernetics and Robotics \textbf{71}, 50--56 (2019)
 
 \end{thebibliography}
 
