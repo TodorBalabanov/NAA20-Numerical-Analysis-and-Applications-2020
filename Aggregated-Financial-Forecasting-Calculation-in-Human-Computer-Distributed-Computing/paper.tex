@@ -41,19 +41,19 @@ Three of the most famous financial forecasting donated distributed computing pro
 %
 \section{Introduction}
 %
-Three of the most famous financial forecasting donated distributed computing projects for the last decade were MoneyBee\cite{money-bee-01}, GStock\cite{g-stock-01} and MQL5 Cloud Network\cite{mql5-cloud-network-01}. MoneyBee project was organized as donated distributed computing screen-saver. Artificial neural networks were trained to forecast financial time series during desktop computers idle usage. GStock project used donated distributed computing for trading strategies testing. Many different investment strategies were checked over historical data and the best suited were applied for buy/sell signals generation. MQL5 Cloud Network is paid distributed computing platform in which trading strategies can be tested. 
+Three of the most famous financial forecasting donated distributed computing projects for the last decade were MoneyBee \cite{money-bee-01}, GStock \cite{g-stock-01} and MQL5 Cloud Network \cite{mql5-cloud-network-01}. MoneyBee project was organized as donated distributed computing screen-saver. Artificial neural networks were trained to forecast financial time series during desktop computers idle usage. GStock project used donated distributed computing for trading strategies testing. Many different investment strategies were checked over historical data and the best suited were applied for buy/sell signals generation. MQL5 Cloud Network is paid distributed computing platform in which trading strategies can be tested. 
 
-The idea of a desktop computer screen-saver used for artificial neural networks training was extended in VitoshaTrade\cite{vitosha-trade-01} project where Android Active Wallpaper is used for the same purpose. The project implementation goes on in IICT-BAS and the forecasting capabilities are evolved in the direction of human-computer based distributed computing (crowdsensing\cite{crowdsensing-01}). The users are asked to vote\cite{voting-01} for the future change in the price of Forex currency pairs. Android operating system provides the ideal user interface capabilities for such voting by its widget components. By HTTP protocol the vote of the users is collected on a remote PHP-MySQL based server. As proposed in NSFDE\&A'20, users' votes are classified in four categories: 1) High voting frequency and high guess rate users; 2) Low voting frequency and high guess rate users; 3) High voting frequency and low guess rate users; 4) Low voting frequency and low guess rate users.
+The idea of a desktop computer screen-saver used for artificial neural networks training was extended in VitoshaTrade \cite{vitosha-trade-01} project where Android Active Wallpaper is used for the same purpose. The project implementation goes on in IICT-BAS and the forecasting capabilities are evolved in the direction of human-computer based distributed computing (crowdsensing \cite{crowdsensing-01}). The users are asked to vote \cite{voting-01} for the future change in the price of Forex currency pairs. Android operating system provides the ideal user interface capabilities for such voting by its widget components. By HTTP protocol the vote of the users is collected on a remote PHP-MySQL based server. As proposed in NSFDE\&A'20, users' votes are classified in four categories: 1) High voting frequency and high guess rate users; 2) Low voting frequency and high guess rate users; 3) High voting frequency and low guess rate users; 4) Low voting frequency and low guess rate users.
 
-This research proposes financial forecasting calculation based on users classification and votes given for particular financial future event. The rest of this paper is organized as follows: Section 2 describes the problems related to financial forecasting; Section 3 states the ideas for computing in a distributed environment; Section 4 proposes a practical solution for a mobile distributed voting solution; Section 5 reveals some practical experiments and related results; and Section 6 concludes with some suggestions for further work.
+This research proposes financial forecasting calculation based on users classification and votes given for particular financial future event. The rest of this paper is organized as follows: Section 1 describes the problems related to financial forecasting and states the ideas for computing in a distributed environment; Section 2 proposes a practical solution for a mobile distributed voting solution; Section 3 reveals some practical experiments and related results; and Section 4 concludes with some suggestions for further work.
 %
-\section{Financial Time Series}
+\subsection{Financial Time Series}
 %
 Time series are values measured in strict time order \cite{time-series-01}. In most of the cases, measurements are done in equal time intervals, but exceptions also do exist \cite{time-series-02}. The result of such measurements is discrete time-ordered data. There are many natural processes that can be described with time series as average daily temperature, count of sunspots number of flu sick people, values of the prices and many others \cite{time-series-03}. Time series are useful in almost every domain where measurements can be done in temporal order. Line charts are the most used tool for visualization of time series. 
 
 Technical analysis of financial time series uses a group of methods for temporal data analyzing in such a way that meaningful statistics and other characteristics to be extracted. Financial time series forecasting is based on a model that predicts future values according to previously observed values. Financial time series usually have trend, seasonality and high-frequency oscillations \cite{time-series-04}. The base of the technical analysis in financial time series is an appropriate curve fitting to the points which are already known.
 %
-\section{Distributed Computing in Financial Forecasting}
+\subsection{Distributed Computing in Financial Forecasting}
 %
 When a particular computation is a too much time consuming it is rational such calculation to be done on many computational machines in parallel \cite{distributed-computing-01}. When artificial neural networks are used for financial time series forecasting, the training can be organized with genetic algorithms \cite{genetic-algorithms-01} or differential evolution \cite{differential-evolution-01}. Both global optimization techniques are perfect for parallel computing and of course for distributed computing because global population can be separated in many local populations and the process of optimization can go simultaneously.
 
@@ -63,12 +63,18 @@ When a particular computation is a too much time consuming it is rational such c
 \label{fig01}
 \end{figure}
 
-In the technical analysis time series are conditionally divided (Fig. \ref{fig01} and Fig.\ref{fig02}) into past (lag) and future (lead) periods \cite{time-series-04}.
-
 \begin{figure}
 \includegraphics[width=\textwidth]{fig02.png}
 \caption{Financial time series.}
 \label{fig02}
+\end{figure}
+
+In the technical analysis time series are conditionally divided (Fig. \ref{fig01} and Fig.\ref{fig02}) into past (lag) and future (lead) periods \cite{time-series-04}. Training examples are loaded as input in the artificial neural network \cite{time-series-04} and the prediction is expected on the output (Fig. \ref{fig03}).
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig03.png}
+\caption{Artificial neural network training.}
+\label{fig03}
 \end{figure}
 %
 \section{Android OS Crowdsensing Solution}
