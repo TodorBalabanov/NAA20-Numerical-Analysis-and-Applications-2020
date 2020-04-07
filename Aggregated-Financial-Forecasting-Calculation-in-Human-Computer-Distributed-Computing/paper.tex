@@ -5,6 +5,7 @@
 \documentclass[runningheads]{llncs}
 %
 \usepackage{graphicx}
+\usepackage{amsmath}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -56,28 +57,54 @@ Technical analysis of financial time series uses a group of methods for temporal
 \subsection{Distributed Computing in Financial Forecasting}
 %
 When a particular computation is a too much time consuming it is rational such calculation to be done on many computational machines in parallel \cite{distributed-computing-01}. When artificial neural networks are used for financial time series forecasting, the training can be organized with genetic algorithms \cite{genetic-algorithms-01} or differential evolution \cite{differential-evolution-01}. Both global optimization techniques are perfect for parallel computing and of course for distributed computing because global population can be separated in many local populations and the process of optimization can go simultaneously.
-
+%
 \begin{figure}
 \includegraphics[width=\textwidth]{fig01.png}
 \caption{Time series splitting to training examples.}
 \label{fig01}
 \end{figure}
-
+%
 \begin{figure}
 \includegraphics[width=\textwidth]{fig02.png}
 \caption{Financial time series.}
 \label{fig02}
 \end{figure}
-
-In the technical analysis time series are conditionally divided (Fig. \ref{fig01} and Fig.\ref{fig02}) into past (lag) and future (lead) periods \cite{time-series-04}. Training examples are loaded as input in the artificial neural network \cite{time-series-04} and the prediction is expected on the output (Fig. \ref{fig03}).
-
+%
+In the technical analysis time series are conditionally divided (Fig. \ref{fig01} and Fig.\ref{fig02}) into past (lag) and future (lead) periods \cite{time-series-04}. Training examples are loaded as input in the artificial neural network \cite{time-series-04} and the prediction is expected on the output (Fig. \ref{fig03}). The training process on the local devices goes into two common phases, which are related to the way the population individual are represented. Artificial neural network topology is predefined and its optimization is beyond the scope of this approach, but the weights of the artificial neural network are subject to optimization. The population of the evolutionary algorithm is organized as sets of artificial neural networks weights matrices. Each set of weights (population individual) is provided to the back-propagation training procedure until there is no significant improvement of the forecasting capabilities. After that crossover and mutation are applied and a new generation is added to the population. Uniform crossover is used as the best way to prevent total information destruction in an artificial neural network. Newly created individuals are also trained with back-propagation algorithm and the evolution algorithm goes continuously. 
+%
 \begin{figure}
 \includegraphics[width=\textwidth]{fig03.png}
 \caption{Artificial neural network training.}
 \label{fig03}
 \end{figure}
 %
+Such symbolic restarting of the back-propagation training has wide similarity with simulated annealing. After the crossover and the mutation operators weights of the artificial neural network are partially distressed and disordered. This helps the back-propagation training to proceed from a previous point of the training process and to escape possible local optimums. When this hybrid training is done on mobile devices the training process goes 24/7. The best-found weights of an artificial neural network are reported to the remote server. In this way, best-found individuals form a global evolutionary algorithm population. 
+%
 \section{Android OS Crowdsensing Solution}
+%
+Distributed computing forecasting described in the previous section is very attractive and very cost-efficient, but it has a common disadvantage - subjective human opinion is not taken in any form. It is very well known that financial markets are extremely volatile. Global disasters like the COVID-19 pandemic are capable to put financial markets in a highly-unpredictable state. In such extreme situations, pure technical analysis is useless. 
+%
+\begin{figure}
+\includegraphics[width=\textwidth]{fig04.png}
+\caption{Android OS voting interface.}
+\label{fig04}
+\end{figure}
+%
+Subjective human opinion in the shape of human intuition can improve forecasting results significantly in situations where methods of pure applied mathematics are not applicable. Human intuition is not completely understood yet, but it is based on rich life experiences and subconscious information processing in the human brain. This research purposes aggregation of the information collected from a mobile device voting system (Fig. \ref{fig04}) and forecasting improvement with the aggregated data in use.
+
+Users have the opportunity to vote for future changes in the particular financial time series. The vote is collected on a remote server. Voters are classified in four common groups: High voting frequency and high guess rate users (group $a$); Low voting frequency and high guess rate users (group $b$); High voting frequency and low guess rate users (group $c$); Low voting frequency and low guess rate users (group $d$). This classification is the base of the aggregated forecasting proposed in this research. Each group of the voters participates with a different coefficient in the final forecast calculation. 
+%
+\begin{equation}
+\begin{array}{l}
+f(x) = \frac{w_{a}}{n_{a}} \sum_{a=1}^{n_{a}} x_{a} + \frac{w_{b}}{n_{b}} \sum_{b=1}^{n_{b}} x_{b} + \frac{w_{c}}{n_{c}} \sum_{c=1}^{n_{c}} x_{c} + \frac{w_{d}}{n_{d}} \sum_{d=1}^{n_{d}} x_{d} \\
+\text{where} \\
+N = n_{a} + n_{b} + n_{c} + n_{d} \\
+w_{a} + w_{b} + w_{c} + w_{d} = 1
+\end{array}
+\label{equ01}
+\end{equation}
+%
+When a particular forecast should be issued single votes for the particular situation are taken and they are aggregate by groups to form the forecast. The forecast is in the form of chance the price to go up (value between 0.0 and 1.0, Eq. \ref{equ01}) and the opposite chance for the price to go down (also between 0.0 and 1.0). The sum of the two chances gives 1. The vector $x$ in Eq. \ref{equ01} is a binary vector. It has 1 for each vote of a user who thinks that the price will go up and it has 0 for each vote of the user who thinks that the price will go down. The total number of available votes for a particular forecasted event is $N$. The size of each group is given by the small letter $n$ with an index. Each group participate in the aggregated forecast with a given coefficient presented by the small letter $w$ with and index. The values of the coefficients are subject to a multicriteria problem and are chosen by the decision-makers.
 %
 \section{Experiments \& Results}
 %
