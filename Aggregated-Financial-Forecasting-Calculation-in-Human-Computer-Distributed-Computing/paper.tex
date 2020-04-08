@@ -104,9 +104,19 @@ w_{a} + w_{b} + w_{c} + w_{d} = 1
 \label{equ01}
 \end{equation}
 %
-When a particular forecast should be issued single votes for the particular situation are taken and they are aggregate by groups to form the forecast. The forecast is in the form of chance the price to go up (value between 0.0 and 1.0, Eq. \ref{equ01}) and the opposite chance for the price to go down (also between 0.0 and 1.0). The sum of the two chances gives 1. The vector $x$ in Eq. \ref{equ01} is a binary vector. It has 1 for each vote of a user who thinks that the price will go up and it has 0 for each vote of the user who thinks that the price will go down. The total number of available votes for a particular forecasted event is $N$. The size of each group is given by the small letter $n$ with an index. Each group participate in the aggregated forecast with a given coefficient presented by the small letter $w$ with and index. The values of the coefficients are subject to a multicriteria problem and are chosen by the decision-makers.
+When a particular forecast should be issued single votes for the particular situation are taken and they are aggregate by groups to form the forecast. The forecast is in the form of chance the price to go up (value between 0.0 and 1.0, Eq. \ref{equ01}) and the opposite chance for the price to go down (also between 0.0 and 1.0). The sum of the two chances gives 1. The vector $x$ in Eq. \ref{equ01} is a binary vector. It has 1 for each vote of a user who thinks that the price will go up and it has 0 for each vote of the user who thinks that the price will go down. The total number of available votes for a particular forecasted event is $N$. The size of each group is given by the small letter $n$ with an index. 
+%
+\begin{figure}
+\includegraphics[width=\textwidth]{fig05.png}
+\caption{Experimental results.}
+\label{fig05}
+\end{figure}
+%
+Each group participate in the aggregated forecast with a given coefficient presented by the small letter $w$ with and index. The values of the coefficients are subject to a multicriteria problem and are chosen by the decision-makers.
 %
 \section{Experiments \& Results}
+%
+For the experiments, EUR/USD pair is taken and ten separate events are selected for forecasting. For each event, 30 separate attempts for prediction are done. In Fig. \ref{fig05} each dot is the average success. The output of the forecasting model is a real number between zero and one. As close, the value is to one as stronger is the prediction that the price will go up. Respectively, as close is the value to zero as stronger is the prediction that the price will go down. As it is shown in Fig. \ref{fig05} in half of the cases forecast was in the right direction. The experiments were done in a small closed group and that is why results are in an early stage of system testing. In order for better results to be achieved much bigger group of participants should be involved. It is essential people with high interest in trading to share their votes for a longer period. 
 %
 \section{Conclusions}
 %
